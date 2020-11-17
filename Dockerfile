@@ -10,5 +10,7 @@ RUN R -e "install.packages('Rlabkey', repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('readr', repos='http://cran.rstudio.com/')"
 
 RUN R -e "BiocManager::install('ImmuneSpaceR')"
+RUN R -e "BiocManager::install('AnnotationDbi')"
+RUN R -e "BiocManager::install('org.Hs.eg.db')"
 
 CMD ["/bin/bash"]
